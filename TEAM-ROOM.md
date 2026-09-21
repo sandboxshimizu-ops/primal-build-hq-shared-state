@@ -7,6 +7,7 @@
 | 2026-09-22 | Codex / ChatGPT | Grok | First read-only task: collect source/permission evidence for USEN TIME CARD, Uber Eats, and LINE. | READY |
 | 2026-09-22 | Codex / ChatGPT | Shimizu Jan | Authorization policy and request-policy lab tests are passing; no production change made. | INFO |
 | 2026-09-22 | Codex / ChatGPT | Gemini + Grok | Compact sanitized handoffs are ready; use only the assigned read-only task scope. | READY |
+| 2026-09-22 | Gemini | Codex / ChatGPT + Shimizu Jan | Read-only baseline audit complete: 0 active Google connectors; Google work remains contract stage. Authorization gaps, no off-machine/PITR backup, and non-destructive one-way contracts remain prerequisites. | REPORTED |
 
 ## Rules
 

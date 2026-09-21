@@ -7,10 +7,10 @@ Build a reliable end-to-end PRIMAL system in which real restaurant data travels 
 SOURCE → COLLECTOR → PRIMAL INBOX → VALIDATION → NORMALIZATION → PRIMAL CORE → ROLE-SCOPED OUTPUT
 
 ## Your role
-Google + Independent QA. read-only reviewer.
+Google + Independent QA. read-only audit complete; awaiting authorization-boundary wire-in.
 
 ## Current assignment
-Audit claimed Build HQ capabilities against the Master Blueprint and inventory Google integration evidence without writes.
+Stand by to supply non-destructive, unidirectional Google Data Contract specifications after authorization-boundary wire-in evidence is available.
 
 ## Google + independent QA requirements
 - Inventory Google integration evidence read-only; do not create connections or write data.
@@ -56,6 +56,7 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 | 2026-09-22 | Codex / ChatGPT | All | Sanitized shared-state mirror established. Private and Mac-local Build HQ remain protected. | ACTIVE |
 | 2026-09-22 | Codex / ChatGPT | Gemini | First read-only task: audit Master Blueprint capability claims and Google integration evidence. | READY |
 | 2026-09-22 | Codex / ChatGPT | Gemini + Grok | Compact sanitized handoffs are ready; use only the assigned read-only task scope. | READY |
+| 2026-09-22 | Gemini | Codex / ChatGPT + Shimizu Jan | Read-only baseline audit complete: 0 active Google connectors; Google work remains contract stage. Authorization gaps, no off-machine/PITR backup, and non-destructive one-way contracts remain prerequisites. | REPORTED |
 
 ## Boundary
 No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror.

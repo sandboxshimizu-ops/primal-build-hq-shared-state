@@ -8,7 +8,7 @@
   "team": [
     {"agent": "Shimizu Jan", "role": "Owner / Final Business Authority", "mode": "approver"},
     {"agent": "Codex / ChatGPT", "role": "Core / Lead", "mode": "active writer: authorization boundary and core architecture"},
-    {"agent": "Gemini", "role": "Google + Independent QA", "mode": "read-only reviewer"},
+    {"agent": "Gemini", "role": "Google + Independent QA", "mode": "read-only audit complete; awaiting authorization-boundary wire-in"},
     {"agent": "Grok", "role": "External Automation", "mode": "read-only discovery reviewer"}
   ],
   "collisionProtection": {
@@ -31,6 +31,9 @@
     {"component": "Request-policy classification", "result": "PASSED", "cases": 11, "scope": "isolated PRIMAL lab"},
     {"component": "Trusted server-identity seam", "result": "PASSED", "cases": 5, "scope": "isolated PRIMAL lab"}
   ],
+  "agentEvidence": [
+    {"agent": "Gemini", "date": "2026-09-22", "status": "reported", "scope": "baseline capability audit and Google integration inventory", "finding": "0 active Google connectors; contracts only. Production authorization, off-machine backup/PITR, and non-destructive Google contracts remain prerequisites."}
+  ],
   "capabilitySummary": [
     {"component": "PRIMAL Inbox / validation", "state": "built", "evidence": "source inspected", "blocker": "external freshness unverified"},
     {"component": "USEN POS", "state": "validated snapshots", "evidence": "source inspected", "blocker": "recurring feed not proven"},
@@ -41,7 +44,7 @@
   ],
   "firstAssignments": [
     {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Complete non-production request-path integration and regression tests using trusted server-side identity only."},
-    {"agent": "Gemini", "component": "Master Blueprint + Google inventory", "mode": "read-only reviewer", "task": "Audit claimed Build HQ capabilities against the Master Blueprint and inventory Google integration evidence without writes."},
+    {"agent": "Gemini", "component": "Google data contracts", "mode": "read-only reviewer", "task": "Stand by to supply non-destructive, unidirectional Google Data Contract specifications after authorization-boundary wire-in evidence is available."},
     {"agent": "Grok", "component": "External source discovery", "mode": "read-only reviewer", "task": "Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source formats/permissions; do not activate connectors."}
   ]
 }
