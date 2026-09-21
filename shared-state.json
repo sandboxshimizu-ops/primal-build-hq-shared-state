@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "system": "PRIMAL Build HQ — Sanitized Shared State",
+  "visibility": "public read-only mirror",
+  "primarySourceOfTruth": "Mac-local detailed PRIMAL Build HQ",
+  "safeContentOnly": true,
+  "excluded": ["credentials", "production database access", "owner-private financial data", "payroll", "customer data", "Mac filesystem paths", "PRIMAL Live source"],
+  "team": [
+    {"agent": "Shimizu Jan", "role": "Owner / Final Business Authority", "mode": "approver"},
+    {"agent": "Codex / ChatGPT", "role": "Core / Lead", "mode": "active writer: authorization boundary and core architecture"},
+    {"agent": "Gemini", "role": "Google + Independent QA", "mode": "read-only reviewer"},
+    {"agent": "Grok", "role": "External Automation", "mode": "read-only discovery reviewer"}
+  ],
+  "collisionProtection": {
+    "rule": "One active writer per component; reviewers and testers return evidence to that writer.",
+    "taskReturn": ["assignment", "changes", "evidence", "tests", "result", "blocker/error", "next action"]
+  },
+  "criticalPath": {
+    "currentStartingPoint": "Prove a default-deny, server-enforced authorization boundary in an isolated non-production lab before activating any real-data connector.",
+    "reason": ["Baseline audit found inactive production request-path access control.", "Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.", "USEN POS validation/normalization exists but recurring real-feed freshness is not verified."],
+    "productionBoundary": "No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror."
+  },
+  "currentTests": [
+    {"component": "Access-control policy", "result": "PASSED", "cases": 13, "scope": "isolated PRIMAL lab"},
+    {"component": "Request-policy classification", "result": "PASSED", "cases": 8, "scope": "isolated PRIMAL lab"}
+  ],
+  "capabilitySummary": [
+    {"component": "PRIMAL Inbox / validation", "state": "built", "evidence": "source inspected", "blocker": "external freshness unverified"},
+    {"component": "USEN POS", "state": "validated snapshots", "evidence": "source inspected", "blocker": "recurring feed not proven"},
+    {"component": "USEN TIME CARD", "state": "not connected", "evidence": "source registry", "blocker": "no connector"},
+    {"component": "Uber Eats", "state": "contract documented", "evidence": "source inspected", "blocker": "connection/reconciliation unverified"},
+    {"component": "Authorization boundary", "state": "lab implementation active", "evidence": "21 local policy tests passed", "blocker": "not wired into production"},
+    {"component": "Backup / recovery", "state": "baseline verified", "evidence": "Git history and logical restore verified", "blocker": "no native Railway PITR or off-machine copy"}
+  ],
+  "firstAssignments": [
+    {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Complete non-production request-path integration and regression tests using trusted server-side identity only."},
+    {"agent": "Gemini", "component": "Master Blueprint + Google inventory", "mode": "read-only reviewer", "task": "Audit claimed Build HQ capabilities against the Master Blueprint and inventory Google integration evidence without writes."},
+    {"agent": "Grok", "component": "External source discovery", "mode": "read-only reviewer", "task": "Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source formats/permissions; do not activate connectors."}
+  ]
+}
