@@ -1,0 +1,24 @@
+name: Sync sanitized handoffs
+
+on:
+  push:
+    paths:
+      - PRIMAL-MISSION.md
+      - shared-state.json
+      - TEAM-ROOM.md
+      - sync-handoffs.js
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node sync-handoffs.js
+      - run: |
+          git diff --quiet || (git config user.name "PRIMAL Build HQ Sync" && git config user.email "noreply@github.com" && git add GEMINI-HANDOFF.md GROK-HANDOFF.md && git commit -m "Sync sanitized handoffs" && git push)

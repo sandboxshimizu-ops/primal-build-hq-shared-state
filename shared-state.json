@@ -15,6 +15,12 @@
     "rule": "One active writer per component; reviewers and testers return evidence to that writer.",
     "taskReturn": ["assignment", "changes", "evidence", "tests", "result", "blocker/error", "next action"]
   },
+  "architecture": "SOURCE → COLLECTOR → PRIMAL INBOX → VALIDATION → NORMALIZATION → PRIMAL CORE → ROLE-SCOPED OUTPUT",
+  "staffSystemRequirements": [
+    "Staff-facing output is limited to explicitly approved operational information.",
+    "Staff must not receive owner-private finance, payroll, banking, tax, or secret-recipe information.",
+    "Authorization must be server-enforced; client-provided roles are not trusted."
+  ],
   "criticalPath": {
     "currentStartingPoint": "Prove a default-deny, server-enforced authorization boundary in an isolated non-production lab before activating any real-data connector.",
     "reason": ["Baseline audit found inactive production request-path access control.", "Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.", "USEN POS validation/normalization exists but recurring real-feed freshness is not verified."],
@@ -22,14 +28,15 @@
   },
   "currentTests": [
     {"component": "Access-control policy", "result": "PASSED", "cases": 13, "scope": "isolated PRIMAL lab"},
-    {"component": "Request-policy classification", "result": "PASSED", "cases": 8, "scope": "isolated PRIMAL lab"}
+    {"component": "Request-policy classification", "result": "PASSED", "cases": 11, "scope": "isolated PRIMAL lab"},
+    {"component": "Trusted server-identity seam", "result": "PASSED", "cases": 5, "scope": "isolated PRIMAL lab"}
   ],
   "capabilitySummary": [
     {"component": "PRIMAL Inbox / validation", "state": "built", "evidence": "source inspected", "blocker": "external freshness unverified"},
     {"component": "USEN POS", "state": "validated snapshots", "evidence": "source inspected", "blocker": "recurring feed not proven"},
     {"component": "USEN TIME CARD", "state": "not connected", "evidence": "source registry", "blocker": "no connector"},
     {"component": "Uber Eats", "state": "contract documented", "evidence": "source inspected", "blocker": "connection/reconciliation unverified"},
-    {"component": "Authorization boundary", "state": "lab implementation active", "evidence": "21 local policy tests passed", "blocker": "not wired into production"},
+    {"component": "Authorization boundary", "state": "lab implementation active", "evidence": "29 local policy tests passed", "blocker": "not wired into production"},
     {"component": "Backup / recovery", "state": "baseline verified", "evidence": "Git history and logical restore verified", "blocker": "no native Railway PITR or off-machine copy"}
   ],
   "firstAssignments": [

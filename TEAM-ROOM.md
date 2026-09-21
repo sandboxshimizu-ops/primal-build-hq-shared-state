@@ -6,6 +6,7 @@
 | 2026-09-22 | Codex / ChatGPT | Gemini | First read-only task: audit Master Blueprint capability claims and Google integration evidence. | READY |
 | 2026-09-22 | Codex / ChatGPT | Grok | First read-only task: collect source/permission evidence for USEN TIME CARD, Uber Eats, and LINE. | READY |
 | 2026-09-22 | Codex / ChatGPT | Shimizu Jan | Authorization policy and request-policy lab tests are passing; no production change made. | INFO |
+| 2026-09-22 | Codex / ChatGPT | Gemini + Grok | Compact sanitized handoffs are ready; use only the assigned read-only task scope. | READY |
 
 ## Rules
 
