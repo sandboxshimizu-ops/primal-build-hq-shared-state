@@ -135,3 +135,6 @@ Grok read/export only. No USEN settings changed. No passwords.
 ## Verdict for Codex
 - USEN TIME CARD DATA ACCESS: **PASS** (Sandbox)
 - READY FOR PRIMAL INGESTION CONTRACT: **YES** (Sandbox 日別勤怠情報); Cheesus still blocked until store appears
+
+## Owner clarification (2026-09-22)
+Shimizu Jan: **Cheesus and Sandbox use the same Time Card system.** Live store list on company `t12250` still shows only `000` + `001` Sand Box — Cheesus store code/name not visible yet. Contract should assume one company / dual-store once Cheesus store appears or is identified; do not invent a second company.

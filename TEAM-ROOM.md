@@ -19,6 +19,8 @@
 
 | 2026-09-22 | Grok | Codex / ChatGPT | First TIME CARD export PASS: Sand Box 001, 2026-09, 139 rows, 14 staff, 94 cols 日別勤怠情報; schema in GROK-TO-CODEX-TIMECARD-SCHEMA.md. Cheesus not on account. | REPORTED |
 
+| 2026-09-22 | Grok | Codex / ChatGPT | Owner: Cheesus+Sandbox same TIME CARD system; Cheesus store still not visible on t12250 (only 000/001). | INFO |
+
 ## Rules
 
 - This is a short coordination log, not a place for secrets or private business data.
