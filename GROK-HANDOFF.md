@@ -26,11 +26,11 @@ Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source format
 - USEN POS: validated snapshots; evidence: source inspected; blocker: recurring feed not proven.
 - USEN TIME CARD: not connected; evidence: source registry; blocker: no connector.
 - Uber Eats: contract documented; evidence: source inspected; blocker: connection/reconciliation unverified.
-- Authorization boundary: lab implementation active; evidence: 29 local policy tests passed; blocker: not wired into production.
+- Authorization boundary: local request-path integration complete; evidence: 61 passing local checks; every known API path intercepted server-side; blocker: not configured, deployed, or production-verified; legacy unreachable wildcard preflight branch requires reviewed removal.
 - Backup / recovery: baseline verified; evidence: Git history and logical restore verified; blocker: no native Railway PITR or off-machine copy.
 
 ## Dependencies and critical path
-Prove a default-deny, server-enforced authorization boundary in an isolated non-production lab before activating any real-data connector.
+Independently audit the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.
 - Baseline audit found inactive production request-path access control.
 - Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.
 - USEN POS validation/normalization exists but recurring real-feed freshness is not verified.
@@ -39,6 +39,9 @@ Prove a default-deny, server-enforced authorization boundary in an isolated non-
 - Access-control policy: PASSED (13 cases; isolated PRIMAL lab).
 - Request-policy classification: PASSED (11 cases; isolated PRIMAL lab).
 - Trusted server-identity seam: PASSED (5 cases; isolated PRIMAL lab).
+- Authorization gate and secure dispatch: PASSED (8 cases; isolated PRIMAL lab).
+- Production authorization policy: PASSED (18 cases; isolated PRIMAL lab).
+- Server wrapper and loopback HTTP integration: PASSED (6 cases; isolated PRIMAL lab).
 
 ## Active writer rule
 One active writer per component; reviewers and testers return evidence to that writer.
@@ -49,13 +52,14 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 - USEN POS: recurring feed not proven.
 - USEN TIME CARD: no connector.
 - Uber Eats: connection/reconciliation unverified.
-- Authorization boundary: not wired into production.
+- Authorization boundary: not configured, deployed, or production-verified; legacy unreachable wildcard preflight branch requires reviewed removal.
 - Backup / recovery: no native Railway PITR or off-machine copy.
 
 ## Team Room — relevant messages
 | 2026-09-22 | Codex / ChatGPT | All | Sanitized shared-state mirror established. Private and Mac-local Build HQ remain protected. | ACTIVE |
 | 2026-09-22 | Codex / ChatGPT | Grok | First read-only task: collect source/permission evidence for USEN TIME CARD, Uber Eats, and LINE. | READY |
 | 2026-09-22 | Codex / ChatGPT | Gemini + Grok | Compact sanitized handoffs are ready; use only the assigned read-only task scope. | READY |
+| 2026-09-22 | Codex / ChatGPT | All | Security Gate #1 local integration evidence: 61 checks pass. Every known API path is server-gated with default deny and exact-origin CORS. No deployment, connector activation, database, or source-data change occurred. | AUDIT PENDING |
 
 ## Boundary
 No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror.
