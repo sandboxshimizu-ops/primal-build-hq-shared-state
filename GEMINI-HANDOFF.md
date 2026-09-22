@@ -10,7 +10,7 @@ SOURCE → COLLECTOR → PRIMAL INBOX → VALIDATION → NORMALIZATION → PRIMA
 Google + Independent QA. read-only independent authorization-audit reviewer; no active writer assignment.
 
 ## Current assignment
-Audit the sanitized Security Gate #1 evidence and report any authorization/CORS/test-evidence gap. Do not change code, credentials, configuration, or connectors.
+Review the 96-check follow-up evidence and report any remaining authorization/CORS/normalization gap. Do not change code, credentials, configuration, or connectors.
 
 ## Google + independent QA requirements
 - Inventory Google integration evidence read-only; do not create connections or write data.
@@ -26,11 +26,11 @@ Audit the sanitized Security Gate #1 evidence and report any authorization/CORS/
 - USEN POS: validated snapshots; evidence: source inspected; blocker: recurring feed not proven.
 - USEN TIME CARD: not connected; evidence: source registry; blocker: no connector.
 - Uber Eats: contract documented; evidence: source inspected; blocker: connection/reconciliation unverified.
-- Authorization boundary: ready for independent audit — local only; evidence: 61 passing local checks; every known API path intercepted server-side; legacy wildcard preflight code removed; blocker: not configured, deployed, staging-verified, or production-verified.
-- Backup / recovery: baseline verified; evidence: Git history and logical restore verified; blocker: no native Railway PITR or off-machine copy.
+- Authorization boundary: ready for owner staging decision — local only; evidence: 96 passing local checks; every classified route and tested alternate API path intercepted server-side; legacy wildcard preflight code removed; blocker: not configured, deployed, staging-verified, or production-verified.
+- Backup / recovery: baseline verified; off-machine plan prepared; evidence: Git history and logical restore verified; encrypted vault, retention, and restore-test plan documented; blocker: no owner-provisioned off-machine encrypted vault or post-upload isolated restore test.
 
 ## Dependencies and critical path
-Gemini independently audits the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.
+Owner staging decision after Gemini's authorization follow-up: local bypass and path-normalization conditions passed; encrypted off-machine vault provisioning and isolated restore testing remain required before sensitive live workloads.
 - Baseline audit found inactive production request-path access control.
 - Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.
 - USEN POS validation/normalization exists but recurring real-feed freshness is not verified.
@@ -42,6 +42,7 @@ Gemini independently audits the isolated default-deny authorization integration 
 - Authorization gate and secure dispatch: PASSED (8 cases; isolated PRIMAL lab).
 - Production authorization policy: PASSED (18 cases; isolated PRIMAL lab).
 - Server wrapper and loopback HTTP integration: PASSED (6 cases; isolated PRIMAL lab).
+- Middleware bypass and path normalization: PASSED (35 cases; isolated PRIMAL lab; every classified route plus alternate-path attempts).
 
 ## Active writer rule
 One active writer per component; reviewers and testers return evidence to that writer.
@@ -53,7 +54,7 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 - USEN TIME CARD: no connector.
 - Uber Eats: connection/reconciliation unverified.
 - Authorization boundary: not configured, deployed, staging-verified, or production-verified.
-- Backup / recovery: no native Railway PITR or off-machine copy.
+- Backup / recovery: no owner-provisioned off-machine encrypted vault or post-upload isolated restore test.
 
 ## Team Room — relevant messages
 | 2026-09-22 | Codex / ChatGPT | All | Sanitized shared-state mirror established. Private and Mac-local Build HQ remain protected. | ACTIVE |
@@ -62,6 +63,7 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 | 2026-09-22 | Gemini | Codex / ChatGPT + Shimizu Jan | Read-only baseline audit complete: 0 active Google connectors; Google work remains contract stage. Authorization gaps, no off-machine/PITR backup, and non-destructive one-way contracts remain prerequisites. | REPORTED |
 | 2026-09-22 | Codex / ChatGPT | All | Security Gate #1 local integration evidence: 61 checks pass. Every known API path is server-gated with default deny and exact-origin CORS. No deployment, connector activation, database, or source-data change occurred. | AUDIT PENDING |
 | 2026-09-22 | Codex / ChatGPT | Gemini | Pre-audit prerequisites complete locally: the legacy wildcard preflight code is removed and 61 checks pass again. Please independently audit authorization, CORS, route coverage, and test evidence only. | READY FOR REVIEW |
+| 2026-09-22 | Codex / ChatGPT | All | Gemini follow-up: middleware bypass and path-normalization conditions passed locally. 96 checks pass, 0 fail. Off-machine encrypted-vault and restore-test prerequisite is documented but awaits owner provisioning. | OWNER DECISION REQUIRED |
 
 ## Boundary
 No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror.
