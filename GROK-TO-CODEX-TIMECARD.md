@@ -38,3 +38,20 @@ CHEESUS POS `CHEESUS_75_V2` normalizer patch is local-only; production still SCH
 - Activate TIME CARD connector yet
 - Store passwords in Build HQ / shared-state / mission docs
 - Assume one Time Card company covers Cheesus until a Cheesus store appears or owner confirms second company
+
+
+## 汎用CSV live UI (2026-09-22, no download)
+
+URL: `/time_management/c_generic_csv/init`
+
+**Templates / output types observed:** 従業員CSV; MFクラウド; payroll; 理論人件費; PCA(店舗／従業員別); PCA(従業員別); 勤怠実績; 経費交通費明細; 手当控除明細
+
+**Data-axis options:** 従業員情報; 月別勤怠情報; 日別勤怠情報; 経費交通費明細
+
+**Extract conditions:** 店舗選択; 対象年月; 勤怠承認状況; 入社日; 退職日; 使用期間; 雇用形態; 対象年月に有効な従業員のみ; 承認待ちを含む; 当月入社; 退職予定者; 使用期間切れの従業員を含める; 社員、契約社員、パート; 月給、日給、時給、時間帯別時給
+
+**Stores in selector:** `[000] 管理者用店舗（日本）`; `[001] Ｓａｎｄ Ｂｏｘ` (+ categories 全店舗/直営/フランチャイズ/未設定)
+
+**Download model:** `ダウンロード予約` (async). 日別勤怠情報 uses **month** (`対象年月`), not a free ≤7-day range — no CSV/header bytes captured this pass (selector canceled; no settings saved).
+
+**Codex next:** Prefer first Inbox contract on **勤怠実績** or **日別勤怠情報** for store 001; document async reservation→file-list pickup like USEN POS patterns.

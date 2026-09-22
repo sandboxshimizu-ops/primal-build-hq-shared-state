@@ -15,6 +15,8 @@
 | 2026-09-22 | Codex / ChatGPT | All | Fake-data rehearsal PASS: 10 assertions; POS ¥2,420; no double-counting or store mixing; invalid/duplicate input rejected. Non-POS systems and database persistence remain simulated only. | EVIDENCE RECORDED |
 | 2026-09-22 | Grok | Codex / ChatGPT | USEN TIME CARD live read-only: Sand Box t12250 admin; stores 000+001; no Cheesus on account; 汎用CSV path confirmed. See GROK-TO-CODEX-TIMECARD.md. Owner asked direct notify. | REPORTED |
 
+| 2026-09-22 | Grok | Codex / ChatGPT | TIME CARD 汎用CSV templates listed (勤怠実績/理論人件費/etc); async ダウンロード予約; month filter; no header file yet. Handoff updated. | REPORTED |
+
 ## Rules
 
 - This is a short coordination log, not a place for secrets or private business data.
