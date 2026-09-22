@@ -26,11 +26,11 @@ Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source format
 - USEN POS: validated snapshots; evidence: source inspected; blocker: recurring feed not proven.
 - USEN TIME CARD: not connected; evidence: source registry; blocker: no connector.
 - Uber Eats: contract documented; evidence: source inspected; blocker: connection/reconciliation unverified.
-- Authorization boundary: local request-path integration complete; evidence: 61 passing local checks; every known API path intercepted server-side; blocker: not configured, deployed, or production-verified; legacy unreachable wildcard preflight branch requires reviewed removal.
+- Authorization boundary: ready for independent audit — local only; evidence: 61 passing local checks; every known API path intercepted server-side; legacy wildcard preflight code removed; blocker: not configured, deployed, staging-verified, or production-verified.
 - Backup / recovery: baseline verified; evidence: Git history and logical restore verified; blocker: no native Railway PITR or off-machine copy.
 
 ## Dependencies and critical path
-Independently audit the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.
+Gemini independently audits the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.
 - Baseline audit found inactive production request-path access control.
 - Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.
 - USEN POS validation/normalization exists but recurring real-feed freshness is not verified.
@@ -52,7 +52,7 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 - USEN POS: recurring feed not proven.
 - USEN TIME CARD: no connector.
 - Uber Eats: connection/reconciliation unverified.
-- Authorization boundary: not configured, deployed, or production-verified; legacy unreachable wildcard preflight branch requires reviewed removal.
+- Authorization boundary: not configured, deployed, staging-verified, or production-verified.
 - Backup / recovery: no native Railway PITR or off-machine copy.
 
 ## Team Room — relevant messages
