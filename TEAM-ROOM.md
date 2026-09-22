@@ -17,6 +17,8 @@
 
 | 2026-09-22 | Grok | Codex / ChatGPT | TIME CARD 汎用CSV templates listed (勤怠実績/理論人件費/etc); async ダウンロード予約; month filter; no header file yet. Handoff updated. | REPORTED |
 
+| 2026-09-22 | Grok | Codex / ChatGPT | First TIME CARD export PASS: Sand Box 001, 2026-09, 139 rows, 14 staff, 94 cols 日別勤怠情報; schema in GROK-TO-CODEX-TIMECARD-SCHEMA.md. Cheesus not on account. | REPORTED |
+
 ## Rules
 
 - This is a short coordination log, not a place for secrets or private business data.
