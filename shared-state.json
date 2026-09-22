@@ -7,8 +7,8 @@
   "excluded": ["credentials", "production database access", "owner-private financial data", "payroll", "customer data", "Mac filesystem paths", "PRIMAL Live source"],
   "team": [
     {"agent": "Shimizu Jan", "role": "Owner / Final Business Authority", "mode": "approver"},
-    {"agent": "Codex / ChatGPT", "role": "Core / Lead", "mode": "active writer: authorization boundary and core architecture"},
-    {"agent": "Gemini", "role": "Google + Independent QA", "mode": "read-only audit complete; awaiting authorization-boundary wire-in"},
+    {"agent": "Codex / ChatGPT", "role": "Core / Lead", "mode": "active writer: authorization boundary audit evidence and core architecture"},
+    {"agent": "Gemini", "role": "Google + Independent QA", "mode": "read-only audit complete; authorization wire-in evidence available for review"},
     {"agent": "Grok", "role": "External Automation", "mode": "read-only discovery reviewer"}
   ],
   "collisionProtection": {
@@ -22,7 +22,7 @@
     "Authorization must be server-enforced; client-provided roles are not trusted."
   ],
   "criticalPath": {
-    "currentStartingPoint": "Prove a default-deny, server-enforced authorization boundary in an isolated non-production lab before activating any real-data connector.",
+    "currentStartingPoint": "Independently audit the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.",
     "reason": ["Baseline audit found inactive production request-path access control.", "Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.", "USEN POS validation/normalization exists but recurring real-feed freshness is not verified."],
     "productionBoundary": "No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror."
   },
@@ -30,6 +30,9 @@
     {"component": "Access-control policy", "result": "PASSED", "cases": 13, "scope": "isolated PRIMAL lab"},
     {"component": "Request-policy classification", "result": "PASSED", "cases": 11, "scope": "isolated PRIMAL lab"},
     {"component": "Trusted server-identity seam", "result": "PASSED", "cases": 5, "scope": "isolated PRIMAL lab"}
+    ,{"component": "Authorization gate and secure dispatch", "result": "PASSED", "cases": 8, "scope": "isolated PRIMAL lab"}
+    ,{"component": "Production authorization policy", "result": "PASSED", "cases": 18, "scope": "isolated PRIMAL lab"}
+    ,{"component": "Server wrapper and loopback HTTP integration", "result": "PASSED", "cases": 6, "scope": "isolated PRIMAL lab"}
   ],
   "agentEvidence": [
     {"agent": "Gemini", "date": "2026-09-22", "status": "reported", "scope": "baseline capability audit and Google integration inventory", "finding": "0 active Google connectors; contracts only. Production authorization, off-machine backup/PITR, and non-destructive Google contracts remain prerequisites."}
@@ -39,11 +42,11 @@
     {"component": "USEN POS", "state": "validated snapshots", "evidence": "source inspected", "blocker": "recurring feed not proven"},
     {"component": "USEN TIME CARD", "state": "not connected", "evidence": "source registry", "blocker": "no connector"},
     {"component": "Uber Eats", "state": "contract documented", "evidence": "source inspected", "blocker": "connection/reconciliation unverified"},
-    {"component": "Authorization boundary", "state": "lab implementation active", "evidence": "29 local policy tests passed", "blocker": "not wired into production"},
+    {"component": "Authorization boundary", "state": "local request-path integration complete", "evidence": "61 passing local checks; every known API path intercepted server-side", "blocker": "not configured, deployed, or production-verified; legacy unreachable wildcard preflight branch requires reviewed removal"},
     {"component": "Backup / recovery", "state": "baseline verified", "evidence": "Git history and logical restore verified", "blocker": "no native Railway PITR or off-machine copy"}
   ],
   "firstAssignments": [
-    {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Complete non-production request-path integration and regression tests using trusted server-side identity only."},
+    {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Prepare 61-check local evidence for independent audit; do not deploy or activate connectors."},
     {"agent": "Gemini", "component": "Google data contracts", "mode": "read-only reviewer", "task": "Stand by to supply non-destructive, unidirectional Google Data Contract specifications after authorization-boundary wire-in evidence is available."},
     {"agent": "Grok", "component": "External source discovery", "mode": "read-only reviewer", "task": "Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source formats/permissions; do not activate connectors."}
   ]
