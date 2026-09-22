@@ -34,6 +34,7 @@
     ,{"component": "Production authorization policy", "result": "PASSED", "cases": 18, "scope": "isolated PRIMAL lab"}
     ,{"component": "Server wrapper and loopback HTTP integration", "result": "PASSED", "cases": 6, "scope": "isolated PRIMAL lab"}
     ,{"component": "Middleware bypass and path normalization", "result": "PASSED", "cases": 35, "scope": "isolated PRIMAL lab; every classified route plus alternate-path attempts"}
+    ,{"component": "Fake-data end-to-end staging rehearsal", "result": "PASSED", "cases": 10, "scope": "generated 2099 data only; POS validation/normalization and role policy tested, other systems simulated"}
   ],
   "agentEvidence": [
     {"agent": "Gemini", "date": "2026-09-22", "status": "reported", "scope": "baseline capability audit and Google integration inventory", "finding": "0 active Google connectors; contracts only. Production authorization, off-machine backup/PITR, and non-destructive Google contracts remain prerequisites."}
@@ -44,7 +45,8 @@
     {"component": "USEN TIME CARD", "state": "not connected", "evidence": "source registry", "blocker": "no connector"},
     {"component": "Uber Eats", "state": "contract documented", "evidence": "source inspected", "blocker": "connection/reconciliation unverified"},
     {"component": "Authorization boundary", "state": "ready for owner staging decision — local only", "evidence": "96 passing local checks; every classified route and tested alternate API path intercepted server-side; legacy wildcard preflight code removed", "blocker": "not configured, deployed, staging-verified, or production-verified"},
-    {"component": "Backup / recovery", "state": "baseline verified; off-machine plan prepared", "evidence": "Git history and logical restore verified; encrypted vault, retention, and restore-test plan documented", "blocker": "no owner-provisioned off-machine encrypted vault or post-upload isolated restore test"}
+    {"component": "Backup / recovery", "state": "baseline verified; off-machine plan prepared", "evidence": "Git history and logical restore verified; encrypted vault, retention, and restore-test plan documented", "blocker": "no owner-provisioned off-machine encrypted vault or post-upload isolated restore test"},
+    {"component": "Fake-data staging rehearsal", "state": "passed — isolated only", "evidence": "POS ¥2,420; no duplicates/store mixing; matched Uber adds ¥0; inventory and labor reconcile; owner/private and staff-approved policy checks pass", "blocker": "database/reconciliation and non-POS connectors are simulated only; no live connector or PostgreSQL end-to-end test"}
   ],
   "firstAssignments": [
     {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Prepare 96-check local evidence for owner staging decision; do not deploy or activate connectors."},

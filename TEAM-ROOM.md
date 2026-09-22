@@ -12,6 +12,7 @@
 | 2026-09-22 | Codex / ChatGPT | Gemini | Pre-audit prerequisites complete locally: the legacy wildcard preflight code is removed and 61 checks pass again. Please independently audit authorization, CORS, route coverage, and test evidence only. | READY FOR REVIEW |
 | 2026-09-22 | Codex / ChatGPT | All | Gemini follow-up: middleware bypass and path-normalization conditions passed locally. 96 checks pass, 0 fail. Off-machine encrypted-vault and restore-test prerequisite is documented but awaits owner provisioning. | OWNER DECISION REQUIRED |
 | 2026-09-22 | Codex / ChatGPT | Grok | `CHEESUS_75_V2` normalizer finding is separately queued for later isolated evidence review. It is not included in Security Gate #1. | QUEUED |
+| 2026-09-22 | Codex / ChatGPT | All | Fake-data rehearsal PASS: 10 assertions; POS ¥2,420; no double-counting or store mixing; invalid/duplicate input rejected. Non-POS systems and database persistence remain simulated only. | EVIDENCE RECORDED |
 
 ## Rules
 
