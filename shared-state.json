@@ -22,7 +22,7 @@
     "Authorization must be server-enforced; client-provided roles are not trusted."
   ],
   "criticalPath": {
-    "currentStartingPoint": "Gemini independently audits the isolated default-deny authorization integration before owner-approved staging verification; do not activate real-data connectors.",
+    "currentStartingPoint": "Owner staging decision after Gemini's authorization follow-up: local bypass and path-normalization conditions passed; encrypted off-machine vault provisioning and isolated restore testing remain required before sensitive live workloads.",
     "reason": ["Baseline audit found inactive production request-path access control.", "Baseline audit found owner-data exposure risk, unauthenticated writes, and permissive CORS.", "USEN POS validation/normalization exists but recurring real-feed freshness is not verified."],
     "productionBoundary": "No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror."
   },
@@ -33,6 +33,7 @@
     ,{"component": "Authorization gate and secure dispatch", "result": "PASSED", "cases": 8, "scope": "isolated PRIMAL lab"}
     ,{"component": "Production authorization policy", "result": "PASSED", "cases": 18, "scope": "isolated PRIMAL lab"}
     ,{"component": "Server wrapper and loopback HTTP integration", "result": "PASSED", "cases": 6, "scope": "isolated PRIMAL lab"}
+    ,{"component": "Middleware bypass and path normalization", "result": "PASSED", "cases": 35, "scope": "isolated PRIMAL lab; every classified route plus alternate-path attempts"}
   ],
   "agentEvidence": [
     {"agent": "Gemini", "date": "2026-09-22", "status": "reported", "scope": "baseline capability audit and Google integration inventory", "finding": "0 active Google connectors; contracts only. Production authorization, off-machine backup/PITR, and non-destructive Google contracts remain prerequisites."}
@@ -42,12 +43,12 @@
     {"component": "USEN POS", "state": "validated snapshots", "evidence": "source inspected", "blocker": "recurring feed not proven"},
     {"component": "USEN TIME CARD", "state": "not connected", "evidence": "source registry", "blocker": "no connector"},
     {"component": "Uber Eats", "state": "contract documented", "evidence": "source inspected", "blocker": "connection/reconciliation unverified"},
-    {"component": "Authorization boundary", "state": "ready for independent audit — local only", "evidence": "61 passing local checks; every known API path intercepted server-side; legacy wildcard preflight code removed", "blocker": "not configured, deployed, staging-verified, or production-verified"},
-    {"component": "Backup / recovery", "state": "baseline verified", "evidence": "Git history and logical restore verified", "blocker": "no native Railway PITR or off-machine copy"}
+    {"component": "Authorization boundary", "state": "ready for owner staging decision — local only", "evidence": "96 passing local checks; every classified route and tested alternate API path intercepted server-side; legacy wildcard preflight code removed", "blocker": "not configured, deployed, staging-verified, or production-verified"},
+    {"component": "Backup / recovery", "state": "baseline verified; off-machine plan prepared", "evidence": "Git history and logical restore verified; encrypted vault, retention, and restore-test plan documented", "blocker": "no owner-provisioned off-machine encrypted vault or post-upload isolated restore test"}
   ],
   "firstAssignments": [
-    {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Prepare 61-check local evidence for independent audit; do not deploy or activate connectors."},
-    {"agent": "Gemini", "component": "Authorization boundary independent audit", "mode": "read-only reviewer", "task": "Audit the sanitized Security Gate #1 evidence and report any authorization/CORS/test-evidence gap. Do not change code, credentials, configuration, or connectors."},
-    {"agent": "Grok", "component": "External source discovery", "mode": "read-only reviewer", "task": "Collect read-only evidence for USEN TIME CARD, Uber Eats, and LINE source formats/permissions; do not activate connectors."}
+    {"agent": "Codex / ChatGPT", "component": "Authorization boundary", "mode": "active writer", "task": "Prepare 96-check local evidence for owner staging decision; do not deploy or activate connectors."},
+    {"agent": "Gemini", "component": "Authorization boundary follow-up", "mode": "read-only reviewer", "task": "Review the 96-check follow-up evidence and report any remaining authorization/CORS/normalization gap. Do not change code, credentials, configuration, or connectors."},
+    {"agent": "Grok", "component": "CHEESUS_75_V2 normalizer", "mode": "queued integration reviewer", "task": "Preserve the reported finding for later isolated source-artifact review and normalizer testing. Do not patch, activate connectors, or mix it into Security Gate #1."}
   ]
 }
