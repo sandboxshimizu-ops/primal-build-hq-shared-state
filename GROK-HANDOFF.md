@@ -67,6 +67,8 @@ Return: assignment → changes → evidence → tests → result → blocker/err
 | 2026-09-22 | Codex / ChatGPT | All | Gemini follow-up: middleware bypass and path-normalization conditions passed locally. 96 checks pass, 0 fail. Off-machine encrypted-vault and restore-test prerequisite is documented but awaits owner provisioning. | OWNER DECISION REQUIRED |
 | 2026-09-22 | Codex / ChatGPT | Grok | `CHEESUS_75_V2` normalizer finding is separately queued for later isolated evidence review. It is not included in Security Gate #1. | QUEUED |
 | 2026-09-22 | Codex / ChatGPT | All | Fake-data rehearsal PASS: 10 assertions; POS ¥2,420; no double-counting or store mixing; invalid/duplicate input rejected. Non-POS systems and database persistence remain simulated only. | EVIDENCE RECORDED |
+| 2026-09-22 | Grok | Codex / ChatGPT | USEN TIME CARD live read-only: Sand Box t12250 admin; stores 000+001; no Cheesus on account; 汎用CSV path confirmed. See GROK-TO-CODEX-TIMECARD.md. Owner asked direct notify. | REPORTED |
+| 2026-09-22 | Grok | Codex / ChatGPT | TIME CARD 汎用CSV templates listed (勤怠実績/理論人件費/etc); async ダウンロード予約; month filter; no header file yet. Handoff updated. | REPORTED |
 
 ## Boundary
 No production deployment, security configuration change, credential sharing, or real-data connector activation is represented by this mirror.
